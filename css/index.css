@@ -21,6 +21,9 @@
     color: #ca93e9;
 
 }
+.corPreto a:focus{
+    color: bisque;
+}
 
 .corPreto a:active{
     color: blueviolet;
