@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Cedric Grolet</title>
+    <link rel="stylesheet" href="../../framework/bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <link rel="shortcut icon"
+        href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACX0lEQVR4Ab3WAWTUbRzA8TMnJ38zczLDZA4Jrxnm9ZoBeEEIhJNkkiQkJGTCDEAmzJxkkpAJIeQkMznJ5GQyJ8OcCWfO3xxPH1y5auvuabe+fAAev+ee53+eTESjXKBEhV1abVVK/E+WvpVliiVqpAT2+MDrtg32aPCUMxypAUaYY4fQ1uIl5xgjaRvjHC9pUeYsf9wErwjU2SflPjkOK8dSxxBDRPcfNVIWWaDFco/nm+UBLe5G75waDW4xyGe2In/SAlW2OBFzy8uk3CbHJIH27qPu0BKBf3u97QsEFjvO+TKBq8R2lYA1ujdNnSoJ37pB4DyxnSdgje6VaFKksyKB68R2jcDFXi5MjQoJnf1DYCXyDmR5SGCS31YkZf6QhT6yxZnIr2mbT70MXqLBDAc1S8oqCd06wXP2uULX3rNJgYMa5BkpjzjVwwAveMwgXauzTp7DGmOVwBuKFBghf4CzjJPvIiETKHOS33WK++wR+EKV9SN4EjPAt8a5wyprrBPrLQ0CmV3WGIr8q00YJk+sAu+ok6lQ5TR/qwKbvO/+GR5PMzQokZlln3v8reZJKZIZZ5sNhjnuEirUKJAZYJkmlzjuijRZ4XtT7LBJcsy7r1Jnmu9lmfv5QdLnciwSWCDLD41QJuVmn4fIcZuUMqP80kDno7SPQ+S4SYMaE7HP8uSIZ75ISg1r99YkrwlsUIwcZJiLbBIoM0HPDTDKAnWaVJhnhgJ5TrYNcZoZ7rFBkx3mGMGa8WWZZqXjWBp8ZJ1y2xpVGuyzzTJTZOlLBYqUeEed0LZLhRKzjPe6469uE9dLj1gaXQAAAABJRU5ErkJggg=="
+        type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .circulo {
+            border-radius: 50%;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .navbar {
+            background-image: radial-gradient(circle, #e9e4ac, #e8e5af, #e8e5b2, #e7e6b4, #e7e6b7, #e8e7ba, #e8e8bd, #e9e9c0, #ebebc4, #ededc8, #eeeecd, #f0f0d1);
+            opacity: 0.8;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000%;
+        }
+
+        .card {
+
+            background-color: #ebe6b8;
+        }
+
+        .linha::after {
+            width: 100vw;
+            height: 50vh;
+            background-color: #eeeecd;
+
+        }
+
+        .imagem::after {
+            background-color: rgb(240, 228, 213);
+            background: linear-gradient(180deg, hsla(50, 51%, 78%, 0) 50%, #ebe6b8);
+            content: "";
+            display: block;
+            inset: 0;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .Sobre {
+            height: 50vh;
+            width: 100vw;
+            background-color: #ebe6b8;
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+
+        .rodape {
+            background-image: radial-gradient(circle, #e9e4ac, #e8e5af, #e8e5b2, #e7e6b4, #e7e6b7, #e8e7ba, #e8e8bd, #e9e9c0, #ebebc4, #ededc8, #eeeecd, #f0f0d1);
+        }
+    </style>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="circulo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU1O5yCvG6X6-vw_9nxZlWoFqrq3kHI8pTpFASsQjoKSg254p4DNdy7j9fs-t8nYeW53M&usqp=CAU"
+                    alt="" style="height: 15vh;">
+
+            </div>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Cedric Grolet</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#doceria">Doceria</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre</a>
+                        </li>
+                    </form>
+
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <main>
+        <div class="flex-fill">
+            <section>
+                <div>
+                    <img src="https://cedric-grolet.com/img/sym/medias/resize/editointro_large_desktop-0463da8a3e7fb6da27f74bf7a4eede52391fd903_CedricGrolet-June25-JustinDeSouza-89.jpg"
+                        class="d-block w-100 " alt="..." style="height: 95vh;width: 100vw;">
+                </div>
+            </section>
+            <section>
+
+                <div style="height: 200vh;background-color:  #ebe6b8;display: flex;justify-content: center;align-items: center;flex-direction: column;"
+                    class="card" id="doceria">
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <div class="col">
+                            <div class="card h-50">
+                                <img src="https://cedric-grolet.com/monte-carlo/6522-product_laptop/pop-de-pop-cornen25.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">POP CORN</h5>
+                                    <p class="card-text">A partir de € 25,00.</p>
+                                    <br>
+                                    <br>
+                                    <div class="col">
+                                        <div class="card h-50">
+                                            <img src="https://cedric-grolet.com/monte-carlo/6480-product_laptop/cookie-banane-cacahuete.jpg"
+                                                class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Biscoito de banana e amendoim</h5>
+                                                <p class="card-text">A partir de € 25,00.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-50">
+                                <img src="https://cedric-grolet.com/monte-carlo/6497-product_laptop/strawberry25.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Morango</h5>
+                                    <p class="card-text">A partir de € 18,00.</p>
+                                    <br>
+                                    <br>
+                                    <div class="col">
+                                        <div class="card h-50">
+                                            <img src="https://cedric-grolet.com/monte-carlo/6419-product_laptop/strawberry-flowerbig25.jpg"
+                                                class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Flor de Morango </h5>
+                                                <p class="card-text">A partir de € 45,00.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-50">
+                                <img src="https://cedric-grolet.com/monte-carlo/6508-product_laptop/peanut25.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Amendoim</h5>
+                                    <p class="card-text">A partir de € 18,00.</p>
+                                    <br>
+                                    <br>
+                                    <div class="col">
+                                        <div class="card h-50">
+                                            <img src="https://cedric-grolet.com/monte-carlo/6482-product_laptop/hazelnut-cookie25.jpg"
+                                                class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Biscoito de Avelã</h5>
+                                                <p class="card-text">A partir de € 25,00.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </section>
+
+
+            <section>
+                <div class="linha"
+                    style="height: 60vh;width: 100vw; background-image: url(https://cedric-grolet.com/img/sym/medias/resize/editofull_laptop-440feb8e82878e8da988c6fd217be8cae30cc542_edito-bandeau-1_desktop.jpg);
+                background-repeat: no-repeat;background-size: cover;filter: brightness(60%);display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                    <h1
+                        style="text-align: center;color: rgb(0, 0, 0);font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-size: 65px;">
+                        CONHEÇA MAIS SOBRE NÓS</h1>
+                    <button type="button" class="btn btn-light" style="width: 8vw;">VAMOS LÁ</button>
+                </div>
+            </section>
+    </main>
+
+
+    <footer>
+        <ul class="nav justify-content-center rodape">
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">© Todos os direitos reservados 2025</a>
+            </li>
+        </ul>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="../../framework/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
