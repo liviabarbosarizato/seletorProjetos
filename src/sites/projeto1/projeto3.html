@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .corRosa {
+            background-image: radial-gradient(circle, #f600ab, #f518ad, #f425ae, #f32eb0, #f236b1, #f13fb3, #f048b4, #ef4fb6, #ee59b8, #ed63ba, #ec6cbc, #eb74be);
+        }
+
+        .footer {
+            background-image: radial-gradient(circle, #f2f2f2, #e7e7e8, #dbdcde, #cfd1d5, #c3c6cb, #b9bcc2, #afb3b8, #a5a9af, #9b9ea4, #909499, #86898e, #7c7f83);
+            height: 15vh;
+        }
+
+        .circulo {
+            border-radius: 50%;
+            overflow: hidden;
+            display: inline-block;
+
+
+
+        }
+
+        .navbar {
+            background-image: radial-gradient(circle, #f2f2f2, #efeff1, #ecedf0, #e9eaef, #e5e8ee, #e2e5eb, #dfe2e7, #dcdfe4, #d9dade, #d5d6d8, #d1d1d3, #cdcdcd);
+            opacity: 0.8;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000%;
+
+        }
+
+        html {
+            overflow-x: hidden;
+        }
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            height: 100vh;
+            color: #e5e8ee;
+            font-size: 20px;
+        }
+        .corPreto a:hover{
+            color: #ffffff;
+
+        }
+
+
+    </style>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!-- CABEÇALHO -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary corPreto">
+            <div class="container-fluid">
+                <div class="circulo">
+                    <img src="data:image/jpeg;base64,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"
+                        alt="">
+                </div>
+                <a class="navbar-brand" href="#">AutoCar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#carros">Carros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nos">Sobre a Empresa </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#orcamento">Solicite um orçamento</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTEUDO COM AS SECTIONS DA PAGINA -->
+    <main class="flex-fill">
+
+        <section>
+            <div>
+                <div class="row" style="height: 90vh;background-size: cover;">
+                    <div class="col-12 col-md-100"
+                        style="background-color: #e9c9dd;display: flex;justify-content: center;align-items: center;">
+                        <img src="https://gowhere.com.br/wp-content/uploads/2024/05/Site-GW-1920-x-1080-px.jpg" alt=""
+                            style="height: 100vh;width: 100vw;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div style="height: 95vh; background-color: #dfdede;display: flex;flex-direction: column;justify-content: center;align-items: center;"
+                id="carros">
+                <br>
+                <h1 style=" font-family: 'Times New Roman', Times, serif;font-size: 50px;">
+                    EXCLUSIVIDADE QUE VOCÊ MERECE!
+                </h1>
+                <br>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2023/03/Lamborghini-Revuelto-2023-1-1.jpg?crop=1&resize=1212,909"
+                                class="card-img-top" alt="...">
+                            <div class="carr" style="text-align: center;">
+                                <h5>Lamborghini urus</h5>
+                                <p>Mais do que um carro, uma experiência de condução sem precedentes.</p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal1" style="background-color: #928b8f;">
+                                    SAIBA MAIS!
+                                </button>
+                                
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal1" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Lamborghini urus</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                               <h2> R$ 7.759.000.</h2> O sucessor do Aventador é híbrido e equipado com um motor V12 e mais três propulsores elétricos para despejar 1.015 cv de potência e 73,9 kgfm de torque.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Voltar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://www.supercars.net/blog/wp-content/uploads/2024/10/2025-Porsche-Taycan-2-770x545.png"
+                                class="card-img-top" alt="...">
+                            <div class="carr" style="text-align: center;">
+                                <h5>Porsche Taycan</h5>
+                                <p>Para aqueles que não se contentam com o comum.</p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal2" style="background-color: #928b8f; margin-top: 26px;">
+                                    SAIBA MAIS!
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Porsche Taycan</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                a partir de aproximadamente <h2>R$ 550 mil</h2>  para modelos usados.<br> E chegando a mais de <h2>R$ 1,5 milhão</h2> para as versões mais potentes e equipadas.
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Voltar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="https://motorshow.com.br/wp-content/uploads/sites/2/2020/02/range-rover_phev_carro-em-movimento-e1581619013447.jpg"
+                                class="card-img-top" alt="...">
+                            <div class="car" style="text-align: center;">
+                                <h5 class="card-title">Range Rover</h5>
+                                <p class="card-text">Liderança tecnológica que define o futuro da performance.</p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal3" style="background-color: #928b8f; margin-top: 51px;">
+                                    SAIBA MAIS!
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal3" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Range Rover</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Os novos modelos, como o Range Rover Sport 2025, podem começar a partir de cerca de<h2> R$ 1,1 milhão</h2> Enquanto os modelos mais antigos e usados, como o Range Rover Evoque de anos anteriores, podem ser encontrados por valores a partir de <h2>R$ 100 mil ou R$ 150 mil.</h2> 
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Voltar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+                <div style="height: 90vh;background-color: bisque;" id="nos">
+                    <div class="row row-cols-1 row-cols-md-3 g-6" style="height: 90vh;">
+                        <div class="col-12 col-md-6"
+                            style="background-color: #ccc8cb;display: flex;justify-content: center;align-items: center;flex-direction: column;background-size: cover;">
+                            <img src="https://wallpapers.com/images/featured/carro-4k-ly05gtgz01buhl15.jpg" alt="" style="height: 90vh;">                
+                        </div>
+                        <div class="col-12 col-md-6 overflow-y-scroll"
+                            style="background-color: #928b8f;display: flex;justify-content: center;align-items: center;flex-direction: column;">
+                            <h2 style="color: rgb(0, 0, 0);font-family: 'Times New Roman', Times, serif;font-size: 50px;">Origem AutoCar </h2>
+                            <br>
+                            <br>
+                            <p>Grilo e Daniel eram dois amigos apaixonados por carros e movidos pelo sonho de empreender. Com pouca grana, mas muita vontade, abriram uma pequena loja de veículos usados em uma esquina da cidade, batizada de Auto Car.
+
+                                No começo, enfrentaram dificuldades: poucos clientes, carros com problemas e dívidas batendo à porta. Mas com honestidade, simpatia e muito trabalho, começaram a ganhar a confiança da comunidade. Grilo cuidava das negociações com seu jeito carismático, enquanto Daniel era o técnico responsável por garantir a qualidade dos veículos.
+                                
+                                Com o tempo, o boca a boca fez a Auto Car crescer. Hoje, a loja é referência na região — símbolo da determinação de dois amigos que acreditaram no próprio potencial.</p>
+                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </section>
+
+            <section>
+                <div>
+                    <div class="row" style="height: 90vh;background-size: cover;" id="orcamento">
+                        <div class="col-12 col-md-100"
+                            style="background-color: #fffcfc;display: flex;justify-content: center;align-items: center;">
+                            <form class="row g-3">
+                                <div class="col-md-6">
+                                  <label for="inputEmail4" class="form-label">Email</label>
+                                  <input type="email" class="form-control" id="inputEmail4">
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="inputPassword4" class="form-label">Senha</label>
+                                  <input type="password" class="form-control" id="inputPassword4">
+                                </div>
+                                <div class="col-12">
+                                  <label for="inputAddress" class="form-label">Endereço</label>
+                                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+                                <div class="col-12">
+                                  <label for="inputAddress2" class="form-label">Complemento</label>
+                                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="inputCity" class="form-label">Cidade</label>
+                                  <input type="text" class="form-control" id="inputCity">
+                                </div>
+                                <div class="col-md-4">
+                                  <label for="inputState" class="form-label">Estado</label>
+                                  <select id="inputState" class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-2">
+                                  <label for="inputZip" class="form-label">CEP</label>
+                                  <input type="text" class="form-control" id="inputZip">
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                      Só eu posso ver
+                                    </label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <button type="submit" class="btn btn-secondary">Entrar</button>
+                                </div>
+                              </form>
+                        
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        
+
+
+    </main>
+
+
+
+    <!-- RODAPE -->
+    <footer class="footer mt-auto footer">
+        <h4 style="display: flex;justify-content: center;align-items: center;">AUTOCAR - TODOS OD DIREITOS RESERVADOS</h4>
+        <ul class="nav justify-content-center" style="display: flex;justify-content: center;align-items: center;">
+            <br>
+            <li class="nav-item">
+              <a style="color: #2c2a2b;" nav-link active aria-current="page" href="#">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: #2c2a2b;" class="nav-link" href="#carros">CARROS</a>
+            </li>
+            <li class="nav-item">
+              <a style="color: #2c2a2b;" class="nav-link" href="#nos">SOBRE A EMPRESA</a>
+            </li>
+          </ul>
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+<!-- flex-direction: column; -->
